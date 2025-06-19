@@ -56,7 +56,7 @@ def create_commendation(schoolkid):
     )
 
 
-if __name__ == '__main__':
+def main():
     name_fragment = input('Введите имя ученика: ')
     matching_kids = Schoolkid.objects.filter(full_name__contains=name_fragment)
 
@@ -74,3 +74,7 @@ if __name__ == '__main__':
         remove_chastisements(schoolkid)
         create_commendation(schoolkid)
         print('Изменения внесены.')
+
+
+if __name__ == '__main__':
+    main()
