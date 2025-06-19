@@ -68,11 +68,11 @@ def main():
             print(f' - {kid.full_name}')
         print('Введите имя одного из этих учеников.')
     else:
-        schoolkid = matching_kids.first()
-        print(f'Ученик найден: {schoolkid.full_name}. Вношу изменения...')
-        fix_marks(schoolkid)
-        remove_chastisements(schoolkid)
-        create_commendation(schoolkid)
+        school_kid = matching_kids.first()
+        print(f'Ученик найден: {school_kid.full_name}. Вношу изменения...')
+        fix_marks(school_kid)
+        remove_chastisements(school_kid)
+        create_commendation(school_kid)
         print('Изменения внесены.')
 
 
