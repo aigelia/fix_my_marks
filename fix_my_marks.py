@@ -41,7 +41,7 @@ def create_commendation(schoolkid):
     last = Commendation.objects.filter(schoolkid=schoolkid).order_by('-created').first()
     if last:
         last_subject_id = last.subject.id
-        subjects = [s for s in subjects if s != last_subject_id] or list(subjects)
+        subjects = [subject for subject in subjects if subject != last_subject_id] or list(subjects)
 
     subject_id = random.choice(subjects)
     lesson = lessons.filter(subject__id=subject_id).order_by('?').first()
